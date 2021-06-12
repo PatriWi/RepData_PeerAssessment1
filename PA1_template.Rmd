@@ -174,7 +174,7 @@ task4_plot <- task4 %>%
 head(task4_plot)
 ```
 
-The result is
+Creating the plot:
 ```{r, echo = TRUE}
 png(filename="timeseries2.png", width=480,height=480)
 ggplot(data = task4_plot, aes(x = interval, y = steps, color = dtype)) +

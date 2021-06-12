@@ -322,7 +322,7 @@ head(task4_plot)
     ## 5 weekday       20 0.0990
     ## 6 weekday       25 1.59
 
-The result is
+Creating the plot:
 
 ``` r
 png(filename="timeseries2.png", width=480,height=480)

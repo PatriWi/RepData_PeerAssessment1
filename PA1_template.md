@@ -81,6 +81,7 @@ head(task1)
 Make the plot with base R:
 
 ``` r
+png(filename="histogram1.png", width=480,height=480)
 hist(
     task1$steps,
     xlab = "Number of steps taken per day",
@@ -90,9 +91,13 @@ hist(
     col = "turquoise3"
 )
 box()
+dev.off ()
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+    ## png 
+    ##   2
+
+![](histogram1.png)
 
 Calculate and save the mean and the median:
 
@@ -136,15 +141,20 @@ head(task2)
 Make the plot with ggplot2:
 
 ``` r
+png(filename="timeseries1.png", width=480,height=480)
 ggplot(data = task2, aes(x = interval, y = steps)) +
     geom_line(color = 6, size = 0.5) +
     xlab("5-minute interval") +
     ylab("average number of steps taken")+
     labs(title = "time series plot of averaged steps per 5-min interval",
          color = "types")
+dev.off ()
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+    ## png 
+    ##   2
+
+![](timeseries1.png)
 
 Calculating the 5-minute interval that, on average across all the days
 in the dataset, contains the maximum number of steps
@@ -212,6 +222,7 @@ head(task1_noan)
 And then the plot is made by the code
 
 ``` r
+png(filename="histogram2.png", width=480,height=480)
 hist(
     task1_noan$steps,
     xlab = "Number of steps taken per day/no NAs",
@@ -220,9 +231,14 @@ hist(
     main = "Distribution of number of steps taken per day",
     col = "turquoise3"
 )
+box()
+dev.off ()
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+    ## png 
+    ##   2
+
+![](histogram2.png)
 
 The new mean and median are
 
@@ -311,6 +327,7 @@ head(task4_plot)
 The result is
 
 ``` r
+png(filename="timeseries2.png", width=480,height=480)
 ggplot(data = task4_plot, aes(x = interval, y = steps, color = dtype)) +
     geom_line(size = 0.5) +
     facet_wrap(~dtype ,ncol = 1, nrow = 2)+
@@ -318,6 +335,10 @@ ggplot(data = task4_plot, aes(x = interval, y = steps, color = dtype)) +
     ylab("average number of steps taken")+
     labs(title = "time series plots of averaged steps per 5-min interval",
          color = "types")
+dev.off ()
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+    ## png 
+    ##   2
+
+![](timeseries2.png)

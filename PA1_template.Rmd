@@ -2,7 +2,7 @@
 title: "PA1_template"
 output: rmarkdown::github_document
 ---
-knitr::opts_chunk$set(fig.path='Figs/')
+
 
 ## Coursera: Reproducible Research Assignment 1
 

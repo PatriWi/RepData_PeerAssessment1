@@ -1,8 +1,6 @@
 PA1\_template
 ================
 
-knitr::opts\_chunk$set(fig.path=‘Figs/’)
-
 ## Coursera: Reproducible Research Assignment 1
 
 ### Preparation for the Assignment

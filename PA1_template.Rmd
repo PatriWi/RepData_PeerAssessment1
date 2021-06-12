@@ -1,7 +1,8 @@
 ---
 title: "PA1_template"
-output: html_document
+output: rmarkdown::github_document
 ---
+knitr::opts_chunk$set(fig.path='Figs/')
 
 ## Coursera: Reproducible Research Assignment 1
 
@@ -174,8 +175,6 @@ ggplot(data = task4_plot, aes(x = interval, y = steps, color = dtype)) +
          color = "types")
 ```
 
-
-####Save as html
 
 
 
